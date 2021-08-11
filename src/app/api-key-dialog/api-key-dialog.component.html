@@ -1,0 +1,35 @@
+<div class="content-wrapper">
+    <h2>Api Keys</h2>
+    <mat-form-field>
+        <mat-label>Brickset</mat-label>
+        <input [(ngModel)]="data.brickset.value" [disabled]="data.brickset.saved" matInput type="text">
+        <button *ngIf="data.brickset.saved" (click)="data.brickset.saved = false" mat-button matSuffix>
+            <mat-icon>edit</mat-icon>
+        </button>
+        <button *ngIf="data.brickset.saved" (click)="deleteBricksetApiKey()" mat-button matSuffix>
+            <mat-icon>clear</mat-icon>
+        </button>
+    </mat-form-field>
+    <button *ngIf="!data.brickset.saved" (click)="saveBricksetApiKey()" mat-button matSuffix>
+        <mat-icon>save</mat-icon>
+        <span> Save</span>
+    </button>
+    <mat-divider></mat-divider>
+    <mat-form-field>
+        <mat-label>Rebrickable</mat-label>
+        <input [(ngModel)]="data.rebrickable.value" [disabled]="data.rebrickable.saved" matInput type="text">
+        <button *ngIf="data.rebrickable.saved" (click)="data.rebrickable.saved = false" mat-button matSuffix>
+            <mat-icon>edit</mat-icon>
+        </button>
+        <button *ngIf="data.rebrickable.saved" (click)="deleteRebrickableApiKey()" mat-button matSuffix>
+            <mat-icon>clear</mat-icon>
+        </button>
+    </mat-form-field>
+    <button *ngIf="!data.rebrickable.saved" (click)="saveRebrickableApiKey()" mat-button matSuffix>
+        <mat-icon>save</mat-icon>
+        <span> Save</span>
+    </button>
+    <div align="center" mat-dialog-actions>
+        <button cdkFocusInitial mat-button mat-dialog-close>Close</button>
+    </div>
+</div>

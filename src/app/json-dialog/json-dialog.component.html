@@ -1,0 +1,11 @@
+<!-- <table mat-table [dataSource]="data.json$" class="mat-elevation-z8"></table> -->
+<div class="content-wrapper">
+    <p *ngIf="data.json$ | async as data; else loading">{{ stringify(data) }}</p>
+    <ng-template #loading>
+        <mat-spinner></mat-spinner>
+    </ng-template>
+</div>
+<mat-divider></mat-divider>
+<div align="center" mat-dialog-actions>
+    <button mat-button mat-dialog-close>Close</button>
+</div>

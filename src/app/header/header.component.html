@@ -1,0 +1,18 @@
+<mat-toolbar color="primary">
+    <mat-icon>dashboard</mat-icon>
+    <span>My Legos</span>
+    <span class="toolbar-spacer"></span>
+    <div *ngIf="user$ | async; else noauth">
+        <button (click)="openApiKeyDialog()" mat-button>
+            <mat-icon>vpn_key</mat-icon>
+            <span> Manage API Keys</span>
+        </button>
+        <span>You are logged in</span>
+    </div>
+    <ng-template #noauth>
+        <button (click)="login()" mat-button>
+            <mat-icon>login</mat-icon>
+            <mat-label> Sign In</mat-label>
+        </button>
+    </ng-template>
+</mat-toolbar>

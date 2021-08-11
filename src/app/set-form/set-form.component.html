@@ -1,0 +1,79 @@
+<div class="content-wrapper">
+    <div class="form-wrapper">
+        <form (submit)="submit()" [formGroup]="setForm">
+            <mat-form-field color="accent">
+                <mat-label>Set Number</mat-label>
+                <input formControlName="number" matInput />
+                <mat-error *ngIf="setForm?.controls?.number?.touched && setForm?.controls?.number?.invalid">
+                    <span *ngIf="setForm?.controls?.number?.errors?.required">This field is mandatory.</span>
+                </mat-error>
+            </mat-form-field>
+
+            <mat-slide-toggle formControlName="opened">Opened</mat-slide-toggle>
+
+            <mat-form-field color="accent">
+                <mat-label>Set Name</mat-label>
+                <input formControlName="name" matInput />
+            </mat-form-field>
+
+            <mat-form-field color="accent">
+                <mat-label>Number of Pieces</mat-label>
+                <input formControlName="pieces" matInput />
+            </mat-form-field>
+
+            <mat-form-field color="accent">
+                <mat-label>Year Released</mat-label>
+                <input formControlName="year" matInput />
+            </mat-form-field>
+
+            <mat-form-field color="accent">
+                <mat-label>Theme</mat-label>
+                <input formControlName="theme" matInput />
+            </mat-form-field>
+
+            <mat-form-field color="accent">
+                <mat-label>Subtheme</mat-label>
+                <input formControlName="subtheme" matInput />
+            </mat-form-field>
+
+            <mat-form-field color="accent">
+                <mat-label>Price Paid</mat-label>
+                <input formControlName="price" matInput />
+            </mat-form-field>
+
+            <mat-form-field color="accent">
+                <mat-label>Estimated Value</mat-label>
+                <input formControlName="value" matInput />
+            </mat-form-field>
+
+            <mat-form-field color="accent">
+                <mat-label>Brickset Image</mat-label>
+                <input formControlName="bricksetImage" matInput />
+            </mat-form-field>
+
+            <mat-form-field color="accent">
+                <mat-label>Brickset URL</mat-label>
+                <input formControlName="bricksetUrl" matInput />
+            </mat-form-field>
+
+            <mat-form-field color="accent">
+                <mat-label>Rebrickable Image</mat-label>
+                <input formControlName="rebrickableImage" matInput />
+            </mat-form-field>
+
+            <mat-form-field color="accent">
+                <mat-label>Rebrickable URL</mat-label>
+                <input formControlName="rebrickableUrl" matInput />
+            </mat-form-field>
+
+            <div class="button-container">
+                <button (click)="import('brickset')" mat-button type="button">Import Brickset</button>
+                <button (click)="saveSet.emit()" mat-stroked-button type="button">Cancel</button>
+                <button color="primary" mat-raised-button type="submit">
+                    <mat-icon>save</mat-icon>
+                    <span> Save</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "lego-inventory-69234": {
+      "hosting": {
+        "lego-inventory": [
+          "lego-inventory-69234"
+        ]
+      }
+    }
+  }
+}
