@@ -1,0 +1,45 @@
+<mat-card *ngIf="set" class="item">
+    <mat-card-title>{{ set!.number }} -- {{ set!.name }}</mat-card-title>
+    <mat-card-subtitle>
+        <span>{{ set!.theme }} / {{ set!.subtheme }}</span>
+        <mat-chip-list>
+            <mat-chip *ngIf="set.opened; else unopened">Opened</mat-chip>
+            <ng-template #unopened>
+                <mat-chip color="accent" selected>Unopened</mat-chip>
+            </ng-template>
+        </mat-chip-list>
+    </mat-card-subtitle>
+    <img *ngIf="set.bricksetImage as src" [src]="src" mat-card-image [title]="getTitle(set)" />
+    <mat-card-actions>
+        <button [matMenuTriggerFor]="cardMenu" mat-icon-button>
+            <mat-icon>more_vert</mat-icon>
+        </button>
+        <mat-menu #cardMenu="matMenu">
+            <ng-container *ngIf="user$ | async">
+                <button (click)="edit.emit(set!)" mat-menu-item>
+                    <mat-icon>edit</mat-icon>
+                    <span>Edit</span>
+                </button>
+                <button (click)="duplicate()" mat-menu-item>
+                    <mat-icon>content_copy</mat-icon>
+                    <span>Duplicate</span>
+                </button>
+            </ng-container>
+            <a *ngIf="set.bricksetUrl as url" [href]="url" mat-menu-item>
+                <mat-icon>link</mat-icon>
+                <span>BrickSet</span>
+            </a>
+            <a *ngIf="set.rebrickableUrl as url" [href]="url" mat-menu-item>
+                <mat-icon>link</mat-icon>
+                <span>Rebrickable</span>
+            </a>
+        </mat-menu>
+        <mat-form-field *ngIf="!set.price" color="accent">
+            <mat-label>Price</mat-label>
+            <input [formControl]="price" matInput />
+            <button (click)="savePrice()" [disabled]="!price" mat-icon-button matSuffix>
+                <mat-icon>save</mat-icon>
+            </button>
+        </mat-form-field>
+    </mat-card-actions>
+</mat-card>

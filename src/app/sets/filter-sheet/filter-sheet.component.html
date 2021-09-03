@@ -1,0 +1,42 @@
+<section>
+    <h3>Filter by Priced</h3>
+    <mat-button-toggle-group [formControl]="priceFilter">
+        <mat-button-toggle value="">All</mat-button-toggle>
+        <mat-button-toggle value="priced">Priced</mat-button-toggle>
+        <mat-button-toggle value="unpriced">Unpriced</mat-button-toggle>
+    </mat-button-toggle-group>
+</section>
+<section>
+    <h3>Filter by Opened</h3>
+    <mat-button-toggle-group [formControl]="openedFilter">
+        <mat-button-toggle value="">All</mat-button-toggle>
+        <mat-button-toggle value="opened">Opened</mat-button-toggle>
+        <mat-button-toggle value="unopened">Unopened</mat-button-toggle>
+    </mat-button-toggle-group>
+</section>
+<section>
+    <h3>Filter by Set Number</h3>
+    <mat-form-field color="accent">
+        <mat-label>Set Number</mat-label>
+        <input [formControl]="numberFilter" matInput />
+    </mat-form-field>
+</section>
+<section>
+    <h3>Filter by Name</h3>
+    <mat-form-field color="accent">
+        <mat-label>Set Name</mat-label>
+        <input [formControl]="nameFilter" matInput />
+    </mat-form-field>
+</section>
+<!-- <section>
+    <h3>Filter by Priced</h3>
+    <mat-button-toggle-group [formControlName]="priceFilter">
+        <mat-button-toggle value="">All</mat-button-toggle>
+        <mat-button-toggle value="priced">Priced</mat-button-toggle>
+        <mat-button-toggle value="unpriced">Unpriced</mat-button-toggle>
+    </mat-button-toggle-group>
+</section> -->
+<div class="button-container">
+    <button (click)="clearFilters()" mat-raised-button>Clear Filters</button>
+    <button (click)="applyFilters()" color="primary" mat-raised-button>Apply Filters</button>
+</div>

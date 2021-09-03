@@ -1,0 +1,29 @@
+:host {
+    display: block;
+    width: 400px;
+}
+
+.item {
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+mat-card-actions {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+}
+
+mat-card-subtitle {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+}
+
+mat-form-field {
+    width: 120px;
+}
+
+.action-spacer {
+    flex: 1 1 auto;
+}

@@ -1,0 +1,42 @@
+<mat-toolbar color="primary">
+    <button [matMenuTriggerFor]="menu" mat-icon-button>
+        <mat-icon>dashboard</mat-icon>
+    </button>
+    <mat-menu #menu="matMenu">
+        <button (click)="newSet()" mat-menu-item>
+            <mat-icon>add</mat-icon>
+            <span>Add Set</span>
+        </button>
+        <button (click)="refreshData()" mat-menu-item>
+            <mat-icon>refresh</mat-icon>
+            <span>Refresh Data</span>
+        </button>
+        <button (click)="showFilters()" mat-menu-item>
+            <mat-icon>filter_list</mat-icon>
+            <span>Filters</span>
+        </button>
+        <button *ngIf="canClearFilters$ | async" (click)="clearFilters()" mat-menu-item>
+            <mat-icon>clear_all</mat-icon>
+            <span>Clear Filters</span>
+        </button>
+    </mat-menu>
+    <span>My Legos</span>
+    <span class="toolbar-spacer"></span>
+    <h2>Total Sets: {{ totalCount$ | async }}</h2>
+    <span class="toolbar-spacer"></span>
+    <h2>Total Price: {{ totalPrice$ | async | currency }}</h2>
+    <span class="toolbar-spacer"></span>
+    <div *ngIf="user$ | async; else noauth">
+        <button (click)="openApiKeyDialog()" mat-button>
+            <mat-icon>vpn_key</mat-icon>
+            <span> Manage API Keys</span>
+        </button>
+        <span>You are logged in</span>
+    </div>
+    <ng-template #noauth>
+        <button (click)="login()" mat-button>
+            <mat-icon>login</mat-icon>
+            <mat-label> Sign In</mat-label>
+        </button>
+    </ng-template>
+</mat-toolbar>

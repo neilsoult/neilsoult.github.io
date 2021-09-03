@@ -1,0 +1,4 @@
+<div class="content-wrapper">
+    <app-set-card *ngFor="let set of sets$ | async; trackBy: trackById" (edit)="onEdit($event)" [set]="set">
+    </app-set-card>
+</div>

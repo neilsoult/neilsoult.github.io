@@ -1,4 +1,3 @@
-/* To learn more about this file see: https://angular.io/config/tsconfig. */
 {
     "compileOnSave": false,
     "compilerOptions": {
@@ -18,11 +17,29 @@
         "noImplicitReturns": true,
         "outDir": "./dist/out-tsc",
         "paths": {
+            "@auth/*": [
+                "src/app/auth/*"
+            ],
             "@config": [
                 "src/app/environments/environment"
             ],
+            "@constants/*": [
+                "src/app/constants/*"
+            ],
+            "@helpers/*": [
+                "src/app/helpers/*"
+            ],
             "@interfaces": [
                 "src/app/interfaces"
+            ],
+            "@layout/*": [
+                "src/app/layout/*"
+            ],
+            "@services/*": [
+                "src/app/services/*"
+            ],
+            "@store/*": [
+                "src/app/store/*"
             ]
         },
         "sourceMap": true,
