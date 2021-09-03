@@ -1,0 +1,80 @@
+[
+    {
+        "setID": 28402,
+        "number": "75225",
+        "numberVariant": 1,
+        "name": "Elite Praetorian Guard Battle Pack",
+        "year": 2019,
+        "theme": "Star Wars",
+        "themeGroup": "Licensed",
+        "subtheme": "The Last Jedi",
+        "category": "Normal",
+        "released": true,
+        "pieces": 109,
+        "minifigs": 5,
+        "image": {
+            "thumbnailURL": "https://images.brickset.com/sets/small/75225-1.jpg",
+            "imageURL": "https://images.brickset.com/sets/images/75225-1.jpg"
+        },
+        "bricksetURL": "https://brickset.com/sets/75225-1",
+        "collection": {},
+        "collections": {
+            "ownedBy": 8952,
+            "wantedBy": 1929
+        },
+        "LEGOCom": {
+            "US": {
+                "retailPrice": 14.99,
+                "dateFirstAvailable": "2019-01-02T00:00:00Z",
+                "dateLastAvailable": "2019-12-02T00:00:00Z"
+            },
+            "UK": {
+                "retailPrice": 12.99,
+                "dateFirstAvailable": "2019-01-01T00:00:00Z",
+                "dateLastAvailable": "2019-12-06T00:00:00Z"
+            },
+            "CA": {
+                "retailPrice": 19.99,
+                "dateFirstAvailable": "2019-01-02T00:00:00Z",
+                "dateLastAvailable": "2019-12-02T00:00:00Z"
+            },
+            "DE": {
+                "retailPrice": 14.99,
+                "dateFirstAvailable": "2019-01-02T00:00:00Z",
+                "dateLastAvailable": "2019-12-07T00:00:00Z"
+            }
+        },
+        "rating": 3.9,
+        "reviewCount": 5,
+        "packagingType": "Box",
+        "availability": "Retail",
+        "instructionsCount": 2,
+        "additionalImageCount": 4,
+        "ageRange": {},
+        "dimensions": {
+            "height": 14.1,
+            "width": 19.1,
+            "depth": 4.6,
+            "weight": 0.12
+        },
+        "barcode": {
+            "EAN": "5702016370119",
+            "UPC": "673419303637"
+        },
+        "extendedData": {
+            "tags": [
+                "Elite Praetorian Guard|n",
+                "First Order Stormtrooper|n",
+                "Battle Pack",
+                "Disney",
+                "Droid",
+                "First Order",
+                "Sequel Trilogy",
+                "The Last Jedi",
+                "Training"
+            ],
+            "description": "<p>Let any LEGOÂ® builder play out fun-filled training drills with the LEGO <i>Star Wars</i>â„¢ 75225 Elite Praetorian Guard Battle Pack. This starter pack set features a training platform with spinning turntables for 2 minifigures to stand on to replicate intense training duels. There&#39;s also a weapon rack with detachable weapons, a training droid for even more creative play, 3 Elite Praetorian Guards and a First Order Stormtrooper.                                                                             </p><ul><li> Includes 4 LEGOÂ® <i>Star Wars</i>â„¢ minifigures: 3 Elite Praetorian Guards and a First Order Stormtrooper, plus a training droid LEGO figure.</li><li> LEGOÂ® <i>Star Wars</i>â„¢ building toy features a training platform with 2 spinning turntables, plus a weapon rack.</li><li> Weapons include a Vibro-axe, Electro-staff, Twin Vibro Blades and a stud blaster for the Stormtrooper.</li><li> Spin the turntables and engage in exciting combat training!</li><li> Two of the guards also feature a new-for-January-2019 helmet.</li><li> Train for amazing action scenes from <i>Star Wars</i>â„¢: The Last Jedi!</li><li> Training platform measures over 4â€ (11cm) wide and 2â€ (7cm) deep.</li></ul>"
+        },
+        "lastUpdated": "2018-11-21T02:55:05.677Z"
+    }
+]
