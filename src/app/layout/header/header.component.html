@@ -37,10 +37,10 @@
         </button>
         <span>You are logged in</span>
     </div>
-    <ng-container #noauth>
+    <ng-template #noauth>
         <button (click)="login()" mat-button>
             <mat-icon>login</mat-icon>
             <mat-label> Sign In</mat-label>
         </button>
-    </ng-container>
+    </ng-template>
 </mat-toolbar>
