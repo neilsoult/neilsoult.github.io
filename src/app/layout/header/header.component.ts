@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
 import { MatBottomSheet } from '@angular/material/bottom-sheet';
 import { MatDialog } from '@angular/material/dialog';
 import { AuthDialogComponent } from '@auth/auth-dialog';
@@ -13,6 +13,7 @@ import { SetDialogComponent } from 'src/app/sets/set-dialog';
 import { ApiKeyDialogComponent } from '../api-key-dialog';
 
 @Component({
+    changeDetection: ChangeDetectionStrategy.OnPush,
     selector: 'app-header',
     styleUrls: ['./header.component.scss'],
     templateUrl: './header.component.html'

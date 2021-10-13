@@ -1,5 +1,5 @@
 <mat-toolbar color="primary">
-    <ng-template *ngIf="!disableMenu">
+    <ng-container *ngIf="!disableMenu">
         <button [matMenuTriggerFor]="menu" mat-icon-button>
             <mat-icon>dashboard</mat-icon>
         </button>
@@ -23,7 +23,7 @@
                 <span>Clear Filters</span>
             </button>
         </mat-menu>
-    </ng-template>
+    </ng-container>
     <a href="/" mat-icon-button>
         <mat-icon>home</mat-icon>
     </a>
