@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { ChangeDetectionStrategy, Component, EventEmitter, Input, Output } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import { MatDialog } from '@angular/material/dialog';
 import { AuthService } from '@auth/auth.service';
@@ -12,6 +12,7 @@ import { setActions } from '@store/set-state/set.actions';
 
 
 @Component({
+    changeDetection: ChangeDetectionStrategy.OnPush,
     selector: 'app-set-card',
     styleUrls: ['./set-card.component.scss'],
     templateUrl: './set-card.component.html'

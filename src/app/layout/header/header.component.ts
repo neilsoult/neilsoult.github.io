@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { MatBottomSheet } from '@angular/material/bottom-sheet';
 import { MatDialog } from '@angular/material/dialog';
 import { AuthDialogComponent } from '@auth/auth-dialog';
@@ -18,6 +18,8 @@ import { ApiKeyDialogComponent } from '../api-key-dialog';
     templateUrl: './header.component.html'
 })
 export class HeaderComponent {
+
+    @Input() disableMenu = '';
 
     bricksetApiKey = this.storageService.getStore<string>('brickset_api_key');
     canClearFilters$ = this.store.select(getFiltersExist);

@@ -1,12 +1,12 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { FilterSheetComponent } from './filter-sheet';
 import { SetCardComponent } from './set-card';
 import { SetDialogComponent } from './set-dialog';
 import { SetFormComponent } from './set-form';
 import { SetListComponent } from './set-list';
 import { AppMaterialModule } from '../app-material.module';
-import { FilterSheetComponent } from './filter-sheet/filter-sheet.component';
 
 @NgModule({
     declarations: [
@@ -15,6 +15,9 @@ import { FilterSheetComponent } from './filter-sheet/filter-sheet.component';
         SetFormComponent,
         SetListComponent,
         FilterSheetComponent
+    ],
+    exports: [
+        SetListComponent
     ],
     imports: [
         AppMaterialModule,

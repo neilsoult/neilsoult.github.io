@@ -34,7 +34,7 @@
                 <span>Rebrickable</span>
             </a>
         </mat-menu>
-        <mat-form-field *ngIf="!set.price && (user$ | async)" color="accent">
+        <mat-form-field *ngIf="!set.price && set.id && (user$ | async)" color="accent">
             <mat-label>Price</mat-label>
             <input [formControl]="price" matInput />
             <button (click)="savePrice()" [disabled]="!price" mat-icon-button matSuffix>
