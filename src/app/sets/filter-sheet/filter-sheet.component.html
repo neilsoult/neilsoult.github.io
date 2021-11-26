@@ -28,6 +28,20 @@
         <input [formControl]="nameFilter" matInput />
     </mat-form-field>
 </section>
+<section>
+    <h3>Filter by SubTheme</h3>
+    <mat-form-field color="accent">
+        <mat-label>SubTheme</mat-label>
+        <input [formControl]="subThemeFilter" matInput />
+    </mat-form-field>
+</section>
+<section>
+    <h3>Filter by Theme</h3>
+    <mat-form-field color="accent">
+        <mat-label>Theme</mat-label>
+        <input [formControl]="themeFilter" matInput />
+    </mat-form-field>
+</section>
 <!-- <section>
     <h3>Filter by Priced</h3>
     <mat-button-toggle-group [formControlName]="priceFilter">

@@ -18,6 +18,8 @@ export class FilterSheetComponent {
     numberFilter = new FormControl();
     openedFilter = new FormControl();
     priceFilter = new FormControl();
+    subThemeFilter = new FormControl();
+    themeFilter = new FormControl();
 
     constructor (
         private matBottomSheetRef: MatBottomSheetRef<FilterSheetComponent>,
@@ -30,6 +32,8 @@ export class FilterSheetComponent {
             this.numberFilter.setValue(filters.setNumber);
             this.openedFilter.setValue(filters.opened);
             this.priceFilter.setValue(filters.priced);
+            this.subThemeFilter.setValue(filters.subTheme);
+            this.themeFilter.setValue(filters.theme);
 
         });
 
@@ -42,7 +46,9 @@ export class FilterSheetComponent {
                 name: this.nameFilter.value,
                 opened: this.openedFilter.value,
                 priced: this.priceFilter.value,
-                setNumber: this.numberFilter.value
+                setNumber: this.numberFilter.value,
+                subTheme: this.subThemeFilter.value,
+                theme: this.themeFilter.value
             }
         }));
         this.matBottomSheetRef.dismiss();

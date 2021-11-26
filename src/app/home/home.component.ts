@@ -4,6 +4,8 @@ import { nameFilter } from '@helpers/filters/name';
 import { openedFilter } from '@helpers/filters/opened';
 import { priceFilter } from '@helpers/filters/price';
 import { setNumberFilter } from '@helpers/filters/set-number';
+import { subThemeFilter } from '@helpers/filters/sub-theme';
+import { themeFilter } from '@helpers/filters/theme';
 import { AppState, LegoSet, SetDialogResult } from '@interfaces';
 import { Store } from '@ngrx/store';
 import { setActions } from '@store/set-state/set.actions';
@@ -33,7 +35,9 @@ export class HomeComponent {
                     .filter(nameFilter(filters))
                     .filter(openedFilter(filters))
                     .filter(priceFilter(filters))
-                    .filter(setNumberFilter(filters));
+                    .filter(setNumberFilter(filters))
+                    .filter(subThemeFilter(filters))
+                    .filter(themeFilter(filters));
 
             }));
 

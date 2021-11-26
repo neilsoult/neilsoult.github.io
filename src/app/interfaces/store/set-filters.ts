@@ -3,4 +3,6 @@ export interface SetFilters {
     opened?: '' | 'opened' | 'unopened';
     priced?: '' | 'priced' | 'unpriced';
     setNumber?: string;
+    subTheme?: string;
+    theme?: string;
 }
